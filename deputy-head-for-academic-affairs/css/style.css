@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* RESET STYLES */
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+select {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ============================ */
+
+/* TECHICAL CLASSES */
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+._container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* ============================ */
+
+/* FUTURE SECTION */
+
+.future__section {
+    background-repeat: no-repeat;
+    background-size: 296px 293px;
+}
+
+/* HEADER BLOCK */
+
+.header {
+
+}
+
+.header::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 1230px;
+    height: 1px;
+    margin-top: -20px;
+    background-color: #e6e6e6;
+}
+
+.header__container {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+
+.header__list {
+    display: flex;
+    gap: 30px;
+}
+
+.future__section {
+    width: 100%;
+}
+
+.list__item {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.header__select-menu {
+    color: #7a87a7;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__select-btn {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}   
+
+.header__select-menu.active .header__select-btn i {
+    transition: transform 0.2s;
+    transform: rotate(180deg);
+}
+
+.header__select-menu .header__options {
+    display: none;
+}
+
+.header__select-menu.active .header__options {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 10px 20px 10px;
+    margin-top: 10px;
+    position: absolute;
+    width: 140px;
+    right: 0;
+}
+
+.header__option {
+    background: #fff;
+    color: #000;
+    user-select: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.header__option:first-child {
+    margin-top: 0px;
+}
+
+.header__option:not(:last-child)::after {
+    content: "";
+    display: block; 
+    width: 100%;
+    height: 1px;
+    background-color: #F2F2F2;
+    margin: 10px 0px 0px 0px;
+}
+
+.header__option:last-child:after {
+    content: "";
+    display: block; 
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    margin: 10px 0px 0px 0px;
+}
+
+.header__option:hover {
+    background-color: #F2F2F2;
+}
+
+.header__option-hidden {
+    display: none;
+}
+
+/* ================================ */
+
+/* ================================ */
+
+
+/* INFORMATION SECTION */
+
+
+.information {
+    margin-top: 25px;
+}
+
+
+.information li {
+    position: relative;
+    padding-left: 12px; /* Add space for custom marker */
+}
+
+.information li::before {
+    content: '';
+    width: 3px; /* Width of the custom disc */
+    height: 3px; /* Height of the custom disc */
+    background-color: black; /* Color of the custom disc */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.information__container {
+    display: flex;
+    gap: 38px;
+    padding: 0px 35px;
+    align-items: center;
+}
+
+.information__img {
+    max-width: 266px;
+    max-height: 359px;
+    border-radius: 10px;
+}
+
+.information__suptitle {
+    color: #818181;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.information__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 23px;
+}
+
+.detailed__birthdate {
+    margin-bottom: 9px;
+}
+
+.birthdate__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.birthdate__year {
+    color: #231F20;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.detailed__birthplace {
+    margin-bottom: 9px;
+}
+
+.birthplace__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.birthplace__region {
+    color: #231F20;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.detailed__qualification {
+    margin-bottom: 9px;
+}
+
+.qualification__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.qualification__list__item {
+    color: #231F20;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.major__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.major__list__item {
+    color: #231F20;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* =============================== */
+
+
+/* HUGE TEXT SECTION */
+
+.huge__text {
+    margin-top: 26px;
+    margin-bottom: 56px;
+}
+
+.huge__text li {
+    position: relative;
+    padding-left: 12px; /* Add space for custom marker */
+}
+
+.huge__text li::before {
+    content: '';
+    width: 3px; /* Width of the custom disc */
+    height: 3px; /* Height of the custom disc */
+    background-color: black; /* Color of the custom disc */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.huge__text__container {
+    padding: 0px 35px;
+}
+
+.huge__text__education__block {
+    margin-bottom: 9px;
+}
+
+.education__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 9px;
+}
+
+.education__lsit__item {
+    color: #231F20;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.activity__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 9px;
+}
+
+.activity__list__item {
+    color: #231F20;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* ============================== */
+
+/* FOOTER SECTION */
+
+.footer {
+    background: #212121;
+    padding: 48px 0px;
+    margin-top: auto;
+}
+
+.footer__social__networks__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social__networks__title__block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.title__block__header {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.social__networks__icons__block {
+    display: flex;
+    gap: 24px;
+}
+
+
+.overview__lists__block {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+}
+
+.about__college {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about__college__title {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.lists__about__college {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lists__about__college__item {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.reserved__text {
+    color: rgba(255, 255, 255, 0.40);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* ============================== */
